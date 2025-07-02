@@ -8,7 +8,7 @@ need to explicitly load or blacklist kernel modules. Note that this isn't a
 are still configured by the board support code, but the intention is to
 eventually reach that goal.
 
-On Raspberry Pi, Device Tree usage is controlled from /boot/config.txt. By
+On Raspberry Pi, Device Tree usage is controlled from /boot/firmware/config.txt. By
 default, the Raspberry Pi kernel boots with device tree enabled. You can
 completely disable DT usage (for now) by adding:
 
@@ -17,7 +17,7 @@ completely disable DT usage (for now) by adding:
 to your config.txt, which should cause your Pi to revert to the old way of
 doing things after a reboot.
 
-In /boot you will find a .dtb for each base platform. This describes the
+In /boot/firmware/ you will find a .dtb for each base platform. This describes the
 hardware that is part of the Raspberry Pi board. The loader (start.elf and its
 siblings) selects the .dtb file appropriate for the platform by name, and reads
 it into memory. At this point, all of the optional interfaces (i2c, i2s, spi)
@@ -64,7 +64,7 @@ this becomes a line in config.txt:
 
     dtoverlay=lirc-rpi
 
-This causes the file /boot/overlays/lirc-rpi.dtbo to be loaded. By
+This causes the file /boot/firmware/overlays/lirc-rpi.dtbo to be loaded. By
 default it will use GPIOs 17 (out) and 18 (in), but this can be modified using
 DT parameters:
 
@@ -1861,7 +1861,7 @@ Troubleshooting
 ===============
 
 If you are experiencing problems that you think are DT-related, enable DT
-diagnostic output by adding this to /boot/config.txt:
+diagnostic output by adding this to /boot/firmware/config.txt:
 
     dtdebug=on
 

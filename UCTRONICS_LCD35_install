@@ -1,14 +1,14 @@
 echo Now begin install UCTRONICS_LCD35 driver...
 echo copying the kernel.img file...
-sudo cp ./uctronics_lcd35_rpi/kernel_0.img /boot/kernel.img 
-sudo cp ./uctronics_lcd35_rpi/kernel7.img /boot/kernel7.img
-sudo cp ./uctronics_lcd35_rpi/kernel7l.img /boot/kernel7l.img
+sudo cp ./uctronics_lcd35_rpi/kernel_0.img /boot/firmware/kernel.img 
+sudo cp ./uctronics_lcd35_rpi/kernel7.img /boot/firmware/kernel7.img
+sudo cp ./uctronics_lcd35_rpi/kernel7l.img /boot/firmware/kernel7l.img
 echo copy kernel.img OK.
 
 echo copying the .dtb files...
-sudo cp ./uctronics_lcd35_rpi/*.dtb /boot/
-sudo cp ./uctronics_lcd35_rpi/config.txt /boot/config.txt
-sudo cp ./uctronics_lcd35_rpi/overlays/*.dtb* /boot/overlays/
+sudo cp ./uctronics_lcd35_rpi/*.dtb /boot/firmware/
+sudo cp ./uctronics_lcd35_rpi/config.txt /boot/firmware/config.txt
+sudo cp ./uctronics_lcd35_rpi/overlays/*.dtb* /boot/firmware/overlays/
 echo copy the .dtb files OK.
 
 echo copying the lib files...

@@ -1,8 +1,8 @@
-sudo cp ./backup/kernel.img /boot/kernel.img
-sudo cp ./backup/kernel7.img /boot/
-sudo cp ./backup/kernel7l.img /boot/
-sudo cp ./backup/*.dtb /boot/
-sudo cp ./backup/config.txt /boot/
-sudo cp ./backup/overlays/*.dtb* /boot/overlays/
+sudo cp ./backup/kernel.img /boot/firmware/kernel.img
+sudo cp ./backup/kernel7.img /boot/firmware/
+sudo cp ./backup/kernel7l.img /boot/firmware/
+sudo cp ./backup/*.dtb /boot/firmware/
+sudo cp ./backup/config.txt /boot/firmware/
+sudo cp ./backup/overlays/*.dtb* /boot/firmware/overlays/
 sudo cp -rf ./backup/lib/* /lib/
 sudo reboot

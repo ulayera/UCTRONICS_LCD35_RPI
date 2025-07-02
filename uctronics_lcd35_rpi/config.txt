@@ -51,7 +51,7 @@ core_freq=250
 # Uncomment this to enable the lirc-rpi module
 #dtoverlay=lirc-rpi
 
-# Additional overlays and parameters are documented /boot/overlays/README
+# Additional overlays and parameters are documented /boot/firmware/overlays/README
 
 # Enable audio (loads snd_bcm2835)
 dtparam=audio=on
